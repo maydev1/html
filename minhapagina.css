@@ -1,55 +1,26 @@
 body {
     background-color: rgb(231, 186, 196);
+    font-size:50px;
 }
 
-.titulo {
-    font-size: 50px;
-    color: rgb(71, 8, 178);
-    text-align: center;
-    font: verdana;
-    padding: 20px;
-    border: 3px solid rgb(170, 73, 142);
-    font-style: oblique;
-    text-decoration: underline rgb(168, 87, 145) double;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgb(247, 241, 241), 0 0 25px rgb(231, 162, 224), 0 0 5px
-}
-
-#paragrafo {
-    font-family: verdana;
-    font-size: 25px;
-    color: brown;
-    text-align: center;
-    font-style: oblique;
-    text-decoration: underline;
-    text-transform: capitalize;
-}
-
-.texto {
-    font-size: 25px;
-    color: rgb(9, 9, 90);
-    font-style: italic;
-    text-align: center;
-    width: 60%;
-    margin: 0 auto;
-
-}
-
-.versiculo {
-    background-color: rgb(207, 127, 184);
-    color: white;
-    border: 2px solid rgb(152, 98, 141);
-    margin: 20px;
-    padding: 20px;
-    font-style: italic;
-    font-size: 25px;
- 
+select, input, button, div { 
+    display: block;
+    margin-bottom: 10px;
+    font-size:50px;
+    border-radius: 10px;
     
 }
 
-.button-proxima {
-    display: flex;
-    justify-content: flex-end;
-    width: 70%;
-    margin: 300px;
+#resultado {
+    display: none;
+    background-color: rgb(5, 207, 11);
+    padding: 5px 10px 5px 30px;
+    width:580px;
+
+}
+
+button {
+    background-color: rgb(241, 176, 246);
+    padding: 10px;
+    border-color: pink;
 }

@@ -1,32 +1,60 @@
 <html>
-   <head>
+  <head>
     <link rel="stylesheet" href="minhapagina.css">
-    <title>Momento com Deus</title>      
-   </head>
-   <body>
-        <h1 class="titulo">Seu amor não muda</h1>
-        <p id="paragrafo">O amor ensinado por Jesus vai além das palavras, é revelado em ações e obras</p>
-        <br/>
-       <p class="texto">O Amor é a base, é a sustentação! É a coluna que vai fazer tudo permanecer
-         estruturado, é o ingrediente que vai unir todas as coisas! É o vínculo da perfeição (Colossenses 3:14)
-        <br/>
-        <br/>
-        <div class="versiculo">
-         “Deem graças ao Senhor, porque ele é bom. O seu amor dura para sempre!” (Salmos 136:1)
-        </div>
-        <div class="versiculo">
-          “O Senhor é compassivo e misericordioso, mui paciente e cheio de amor.” (Salmos 103:8)
-        </div>
-        <div class="versiculo">
-          “O teu amor é melhor do que a vida! Por isso os meus lábios te exaltarão.” (Salmos 63:3)
-        </div>
-        <div class="versiculo">
-          “O teu amor, Senhor, chega até os céus; a tua fidelidade até as nuvens.” (Salmos 36:5)
-        </div>
-        </p>
-        <div class="button-proxima">
-            <input type="button" value=" Próxima">
-        </div>
-        
-   </body>
+  </head>
+  <body>
+    <select id="operacao">
+      <option value="+">
+       soma
+      </option>
+      <option value="-">
+       subtração
+      </option>
+      <option value="*">
+      multiplicação
+      </option>
+      <option value="/">
+      divisão
+      </option>
+    </select>
+    X: <input id="x" inputmode="numeric"/>
+    Y: <input id="y" inputmode="numeric"/>
+    <button onclick="calcula()">
+    Calcular
+    </button>
+    <br/>
+    <div id="resultado">
+    </div>
+    <script>
+      function calcula() {
+        var x = document.querySelector("#x");
+        var y = document.querySelector("#y");
+        var operacao = document.querySelector ("#operacao");
+        var resultado = document.querySelector ("#resultado");
+
+        if (x.value == "" || y.value == "") {
+          alert ("Favor preencher o valor de x e y");
+        } else {
+
+          if (operacao.value == "+") {
+            resultado.innerHTML = parseInt(x.value) + parseInt(y.value);
+          }
+          if (operacao.value == "-") {
+            resultado.innerHTML = parseInt(x.value) - parseInt(y.value);
+          }
+          if (operacao.value == "*") {
+            resultado.innerHTML = parseInt(x.value) * parseInt(y.value);
+          }
+          if (operacao.value == "/") {
+            resultado.innerHTML = parseInt(x.value) / parseInt(y.value);
+          }
+          x.value = "";
+          y.value = "";
+          resultado.style.display = "block";
+          resultado.style["background-color"] = "white";
+        }
+
+      }
+    </script>
+  </body>
 </html>
