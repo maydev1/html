@@ -24,3 +24,9 @@ button {
     padding: 10px;
     border-color: pink;
 }
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
